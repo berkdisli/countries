@@ -1,3 +1,122 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --border-radius: 0.6rem;
+  --text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  font-family: "Teko", sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  background-color: rgb(16, 79, 90);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.title {
+  height: 80vh;
+  bottom: 0.8em;
   text-align: center;
+  font-size: 5em;
+  color: #08bae3;
+  z-index: 0;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  background-color: rgb(16, 79, 90);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.loading,
+.not-found {
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgb(65, 132, 134);
+  display: grid;
+  align-items: center;
+}
+
+.loading__logo {
+  min-height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  margin-top: 2em;
+  align-items: center;
+}
+
+.not-found__logo {
+  min-height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+.loading__body,
+.not-found__body {
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+.not-found > a {
+  font-size: 1.8rem;
+  color: #262c3a;
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--border-radius);
+  transition: all 0.2s linear;
+  background-color: #fff;
+  display: flex;
+  width: 11rem;
+  margin-bottom: 2rem;
+}
+
+.not-found > a:hover {
+  background-color: rgb(12, 56, 97);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 5em;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 4.5em;
+    top: 20vh;
+  }
+}
+
+@media (max-width: 370px) {
+  .title {
+    font-size: 4em;
+    top: 15vh;
+  }
 }
