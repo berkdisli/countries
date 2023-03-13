@@ -20,15 +20,51 @@
 html {
   scroll-behavior: smooth;
 }
-
-.header {
+/* navigation */
+nav {
   background-color: rgb(16, 79, 90);
+  height: 10vh;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding: 1rem;
-  color: white;
-  font-size: 1.6rem;
+  padding: 0 1rem;
+  justify-content: end;
+}
+
+.nav-link {
+  font-size: 40px;
+  color: #ffffff;
+  margin: 0 1rem 0 0;
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: rgb(180, 234, 255);
+}
+// menu
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    scrollbar-width: none; //for firefox
+    &::-webkit-scrollbar {
+      // for other browsers
+      display: none;
+    }
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
 }
 
 .title {
@@ -109,7 +145,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   top: 1rem;
   left: 1rem;
 }
