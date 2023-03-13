@@ -32,7 +32,6 @@ html {
 }
 
 .title {
-  height: 80vh;
   bottom: 0.8em;
   text-align: center;
   font-size: 5em;
@@ -50,14 +49,14 @@ html {
   color: white;
   font-size: 1.6rem;
 }
-
+/* loading, not found */
 .loading,
 .not-found {
   flex-direction: column;
   gap: 2rem;
-  background-color: rgb(65, 132, 134);
   display: grid;
   align-items: center;
+  background-color: rgb(255, 255, 255);
 }
 
 .loading__logo {
@@ -78,27 +77,81 @@ html {
   margin-top: 2em;
 }
 
-.loading__body,
+.loading__body {
+  color: rgb(16, 79, 90);
+  font-size: 1.5rem;
+}
 .not-found__body {
   font-size: 1.5rem;
-  color: aliceblue;
+  color: rgb(16, 79, 90);
 }
 
 .not-found > a {
   font-size: 1.8rem;
-  color: #262c3a;
+  color: #fff;
   padding: 0.2rem 0.7rem;
   border-radius: var(--border-radius);
   transition: all 0.2s linear;
-  background-color: #fff;
+  background-color: rgb(10, 46, 80);
   display: flex;
   width: 11rem;
   margin-bottom: 2rem;
 }
 
 .not-found > a:hover {
-  background-color: rgb(12, 56, 97);
-  color: #fff;
+  background-color: rgb(11, 91, 167);
+}
+
+/* search-bar */
+.search-body {
+  background-color: rgb(16, 79, 90);
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.search-container {
+  background: #fff;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    inset -7px -7px 10px 0px rgba(0, 0, 0, 0.1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.3),
+    -4px -4px 6px rgba(116, 125, 136, 0.2);
+  text-shadow: 2px 2px 3px rgba(22, 142, 211, 0.5);
+}
+
+.search-container:hover > .search-input {
+  width: 15rem;
+}
+
+.search-container .search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 0px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.8s;
+}
+
+.fas {
+  margin-top: 8px;
+}
+
+.search-container .search-btn .fas {
+  color: #249e9c;
 }
 
 @media (max-width: 600px) {
