@@ -53,9 +53,6 @@ function handleFilterChange(value: string): void {
                     placeholder="Filter by Region"
                     onChange={handleFilterChange}
               />
-              <div className="sections">
-       
-              </div>
             </div>
             <Link to="/" className="nav-link" >
               <AiOutlineHome className='icon' />
