@@ -1,11 +1,12 @@
 .topbar {
-  height: 15vh;
+  height: 10vh;
   background-color: rgb(16, 79, 90);
   color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   z-index: 3;
   transition: all 1s ease;
+  left: 0.1rem;
 
   .wrapper {
     padding: 10px 30px;
@@ -21,11 +22,6 @@
         display: flex;
         align-items: center;
         margin-left: 30px;
-
-        .icon {
-          font-size: 18px;
-          margin-right: 5px;
-        }
 
         span {
           font-size: 15px;
