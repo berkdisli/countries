@@ -11,15 +11,15 @@ const Route = require("react-router-dom").Route;
 function Index() {
   return (
     <div className="Index">
-            <BrowserRouter>
-      <Header/>
+    <BrowserRouter>
+    <Header/>
       <Routes>
+        <Route path="/" element= {<Home /> }/>
           <Route path="/detail/:cca3" element= {<Detail /> }/>
-          <Route path="/" element= {<Home /> }/>
           <Route path='*' element={<NotFound />} />
-          </Routes>
-          <Footer/>
-      </BrowserRouter>
+      </Routes>
+    <Footer/>
+    </BrowserRouter>
     </div>
 
   );

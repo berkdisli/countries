@@ -92,3 +92,5 @@ export const filteredCountries = (state: RootState) =>
 export const selectedRegion = (state: RootState) =>
   state.countriesR.filteredRegion;
 export const status = (state: RootState) => state.countriesR.status;
+export const selectedCountry = (state: RootState) =>
+  state.countriesR.selectedCountry;
