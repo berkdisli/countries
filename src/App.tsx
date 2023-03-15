@@ -1,13 +1,55 @@
-import React from 'react'
-import './App.scss'
-import Index from './routes'
+import React from 'react';
+import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Switch from '@mui/material/Switch';
+import FormGroup from '@mui/material/FormGroup';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import Index from './routes';
+
+import './App.scss';
+
+const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
 function App() {
+  const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
+  
+  const colorMode = React.useMemo(
+    () => ({
+      toggleColorMode: () => {
+        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+      },
+    }),
+    [],
+  );
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode],
+  );
+
   return (
-    <div className="App">
-      <Index/>
-    </div>
+  <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+      <CssBaseline/>
+        <FormGroup className='switch'>
+          <Switch
+            checked={mode === 'light' ? false : true}
+            onChange={colorMode.toggleColorMode}
+            color={'secondary'}
+            aria-label="theme switch"
+          />
+        </FormGroup>
+        <Index />
+      </ThemeProvider>
+    </ColorModeContext.Provider>
   )
 }
 
-export default App
+export default App;

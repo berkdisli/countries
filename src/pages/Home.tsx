@@ -56,7 +56,6 @@ function Home() {
                     onChange={handleSearch}
                     placeholder="Search..."
                 />
-        
                 {requestStatus === 'loading' && <Loading />}  
                 {searchedCountries.length > 0 &&
                 searchedCountries.map((country) => {

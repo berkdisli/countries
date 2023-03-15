@@ -1,4 +1,4 @@
-export const regionsFilter:string[] = [
+export const RegionsFilter:string[] = [
     'All',
     'Africa',
     'Americas',

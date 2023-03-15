@@ -49,6 +49,10 @@ nav {
   height: 100vh;
 }
 
+.switch {
+  margin-top: 60px;
+}
+
 .title {
   margin-top: 1rem;
   text-align: center;
@@ -125,6 +129,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
   top: 1rem;
   left: 1rem;
 }
@@ -192,7 +197,7 @@ nav {
 }
 
 .icon {
-  font-size: 1.7rem;
+  font-size: 2.2rem;
 }
 
 .footer a:hover {
