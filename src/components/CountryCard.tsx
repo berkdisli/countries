@@ -1,17 +1,32 @@
 import FormatNumber from './FormatNumber';
 import { TableContainer, Paper, Table, TableHead, TableRow, TableCell } from '@mui/material'
-
-import { useNavigate } from 'react-router-dom';
 import { SlArrowRight } from 'react-icons/sl';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { handleFavorites } from '../features/countriesSlice';
+import { Link } from 'react-router-dom';
+import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { useState } from 'react';
 
 interface CountryCardProps {
 	  country: any,
 }
 
 const CountryCard = ({country}: CountryCardProps): JSX.Element => {
-
 	const {flags, name, population, region, capital, languages} = country || {};
-    const navigate = useNavigate();
+    const dispatch = useAppDispatch();
+    let favorites = useAppSelector((state) => state.countriesR.favoriteCountries)
+
+	const handleFavorite = (cca3:string) => {
+		dispatch(handleFavorites(cca3))
+	  }
+  
+	  const selected = (cca3:string) => {
+		if (favorites.includes(cca3)) {
+		  return <AiFillHeart/>
+		}else{
+		 return <AiOutlineHeart/>
+		} 
+	  }
 
 	const languageList = (object: Object) => {
 		const values = Object.values(object);
@@ -22,9 +37,6 @@ const CountryCard = ({country}: CountryCardProps): JSX.Element => {
 	    );
 	 }
 
-	 const handleCountryClick = (countryCode:string): void => {
-        navigate(`/detail/${countryCode}`);
-    }
 
   return (
   <TableContainer component={Paper}>
@@ -37,6 +49,7 @@ const CountryCard = ({country}: CountryCardProps): JSX.Element => {
 				<TableCell width='15%'><p>Region: {region}</p></TableCell>
 				<TableCell width='15%'><p>Capital: {capital?.[0]}</p></TableCell>
 				<TableCell width='15%'><p>Languages:{languages ? languageList(languages) : ''}</p></TableCell>
+				<TableCell> <Link to="/favorites" className='fav-link'><p  onClick={()=>handleFavorite(country.cca3)} className="icon" >{selected(country.cca3)  }</p></Link></TableCell> 
 				<TableCell><SlArrowRight /></TableCell>
 			</TableRow>	   
 		</TableHead>

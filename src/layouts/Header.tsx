@@ -1,14 +1,15 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import { Link } from 'react-router-dom';
 
-import { AiOutlineHome } from 'react-icons/ai';
 import { GiEarthAmerica } from 'react-icons/gi';
 import { AiFillHeart } from 'react-icons/ai';
 
-import { Toggle}  from '../components/Toggle';
+import { Switch, Grid } from '@mui/material';
+
 import TopBar from '../components/navbar/TopBar';
 import Menu from '../components/navbar/Menu';
 
+import { RootState } from "../app/store";
 import { useAppDispatch, useAppSelector } from '../app/hooks'
 
 import {
@@ -26,7 +27,6 @@ const Header = () => {
     'Europe',
     'Oceania',
 ];
-
 const dispatch = useAppDispatch();
 const region = useAppSelector(selectedRegion);
 const [isMenuOpen, isSetMenuOpen] = useState<boolean>(false);
@@ -41,8 +41,6 @@ function handleFilterChange(value: string): void {
     dispatch(getFilteredCountries(value));
 }
 
-  
-
     return (
         <nav>
             <div className="app">
@@ -53,20 +51,17 @@ function handleFilterChange(value: string): void {
                     placeholder="Filter by Region"
                     onChange={handleFilterChange}
               />
-            </div>
-            <Link to="/" className="nav-link" >
-              <AiOutlineHome className='icon' />
-            </Link>
+            </div>          
             <Link to="/" className="nav-link" >            
               <GiEarthAmerica className='icon' />
             </Link>
-            <Link to="/" className="nav-link" >             
+            <Link to="/favorites" className="nav-link" >             
               <AiFillHeart className='icon' />
             </Link>
             <div className="nav-link">
-            <Toggle/>
             </div>     
-        </nav>)
+        </nav>
+        )
 }
 
 export default Header

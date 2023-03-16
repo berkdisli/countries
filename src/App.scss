@@ -53,8 +53,8 @@ nav {
   margin-top: 60px;
 }
 
+//title
 .title {
-  margin-top: 1rem;
   text-align: center;
   font-size: 5em;
   color: #08bae3;
@@ -62,15 +62,12 @@ nav {
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
 }
 
-.footer {
-  background-color: rgb(16, 79, 90);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  color: white;
-  font-size: 1.6rem;
+//down-up arrow
+
+.down-up {
+  cursor: pointer;
 }
+
 /* loading, not found */
 .loading,
 .not-found {
@@ -85,7 +82,7 @@ nav {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 20%;
   margin-top: 2em;
   align-items: center;
 }
@@ -198,6 +195,10 @@ nav {
 
 .icon {
   font-size: 2.2rem;
+}
+
+.fav-link {
+  color: #d80734;
 }
 
 .footer a:hover {

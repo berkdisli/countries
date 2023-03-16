@@ -8,6 +8,7 @@ export interface CountryState {
   selectedCountry: any;
   filteredRegion: string;
   status: "successful" | "loading" | "failed";
+  favoriteCountries: string[];
 }
 
 const baseURL = "https://restcountries.com/v3.1/all";
@@ -30,8 +31,10 @@ export const getFilteredCountries = createAsyncThunk(
 
 export const getCountryDetail = createAsyncThunk(
   "countries/fetchCountryDetail",
-  async (cca3Code: string) => {
-    const response = await axios.get(`${baseURL}/alpha/${cca3Code}`);
+  async (name: string) => {
+    const response = await axios.get(
+      `https://restcountries.com/v3.1/name/${name}`
+    );
     return response.data;
   }
 );
@@ -42,12 +45,42 @@ const initialState: CountryState = {
   selectedCountry: {},
   filteredRegion: "",
   status: "successful",
+  favoriteCountries: [],
 };
 
 export const countriesSlice = createSlice({
   name: "countries",
   initialState,
-  reducers: {},
+  reducers: {
+    handleFavorites: (state, action) => {
+      if (!state.favoriteCountries.includes(action.payload)) {
+        state.favoriteCountries.push(action.payload);
+      } else {
+        state.favoriteCountries = state.favoriteCountries.filter(
+          (country) => country !== action.payload
+        );
+      }
+    },
+    sortAZ: (state) => {
+      state.countries = state.countries.sort((firstCountry, secondCountry) =>
+        firstCountry.name.common > secondCountry.name.common
+          ? 1
+          : firstCountry.name.common < secondCountry.name.common
+          ? -1
+          : 0
+      );
+    },
+    sortZA: (state) => {
+      state.countries = state.countries.sort((firstCountry, secondCountry) =>
+        firstCountry.name.common < secondCountry.name.common
+          ? 1
+          : firstCountry.name.common > secondCountry.name.common
+          ? -1
+          : 0
+      );
+    },
+  },
+
   extraReducers: (builder) => {
     builder
       .addCase(getAllCountries.pending, (state) => {
@@ -85,6 +118,7 @@ export const countriesSlice = createSlice({
 });
 
 export default countriesSlice.reducer;
+export const { handleFavorites, sortAZ, sortZA } = countriesSlice.actions;
 
 export const allCountries = (state: RootState) => state.countriesR.countries;
 export const filteredCountries = (state: RootState) =>

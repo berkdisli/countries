@@ -1,5 +1,4 @@
 import React from 'react';
-import ScopedCssBaseline from '@mui/material/ScopedCssBaseline';
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Switch from '@mui/material/Switch';
@@ -13,12 +12,12 @@ import './App.scss';
 const ColorModeContext = React.createContext({ toggleColorMode: () => { } });
 
 function App() {
-  const [mode, setMode] = React.useState<'light' | 'dark'>('dark');
+  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
   
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
+        setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
       },
     }),
     [],
