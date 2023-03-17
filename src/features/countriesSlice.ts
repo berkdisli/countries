@@ -32,9 +32,7 @@ export const getFilteredCountries = createAsyncThunk(
 export const getCountryDetail = createAsyncThunk(
   "countries/fetchCountryDetail",
   async (name: string) => {
-    const response = await axios.get(
-      `https://restcountries.com/v3.1/name/${name}`
-    );
+    const response = await axios.get(`${baseURL}/name/${name}`);
     return response.data;
   }
 );

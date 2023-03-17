@@ -45,13 +45,30 @@ nav {
 .nav-link:hover {
   color: rgb(180, 234, 255);
 }
+
 // menu
 .app {
   height: 100vh;
 }
 
+// switch
+
 .switch {
-  margin-top: 60px;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+
+  .switch-button {
+    width: 3.6rem;
+  }
+
+  .sun {
+    color: #f7d308;
+  }
+
+  .moon {
+    color: #8a7199;
+  }
 }
 
 //title
@@ -90,7 +107,7 @@ nav {
   background-color: #3b3635;
   border: none;
   cursor: pointer;
-  width: 5rem;
+  width: 6.2rem;
   border-radius: 2rem;
   box-shadow: 1px 0px 4px hsl(0, 0%, 0%);
 }
@@ -129,12 +146,12 @@ nav {
 }
 
 .loading__body {
-  color: rgb(16, 79, 90);
+  color: rgb(15, 161, 187);
   font-size: 1.5rem;
 }
 .not-found__body {
   font-size: 1.5rem;
-  color: rgb(16, 79, 90);
+  color: rgb(15, 161, 187);
 }
 
 .not-found > a {
@@ -145,7 +162,7 @@ nav {
   transition: all 0.2s linear;
   background-color: rgb(10, 46, 80);
   display: flex;
-  width: 11rem;
+  width: 12rem;
   margin-bottom: 2rem;
 }
 

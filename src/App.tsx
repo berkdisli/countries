@@ -5,6 +5,9 @@ import Switch from "@mui/material/Switch";
 import FormGroup from "@mui/material/FormGroup";
 import CssBaseline from "@mui/material/CssBaseline";
 
+import { BsSun } from "react-icons/bs";
+import { BsMoon } from "react-icons/bs";
+
 import Index from "./routes";
 
 import "./App.scss";
@@ -38,12 +41,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <FormGroup className="switch">
-        <Switch
+          <BsSun className="sun" />
+          <Switch
+            className="switch-button"
             checked={mode === "light" ? false : true}
             onChange={colorMode.toggleColorMode}
             color={"secondary"}
             aria-label="theme switch"
           />
+          <BsMoon className="moon" />
         </FormGroup>
         <Index />
       </ThemeProvider>

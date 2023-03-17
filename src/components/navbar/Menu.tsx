@@ -1,11 +1,10 @@
-import {useEffect, useState} from 'react';
+import {useEffect} from 'react';
 import "./Menu.scss";
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 
 import { RegionsFilter } from '../ContinentFilter';
 import {filteredRegion, getAllCountries, getFilteredCountries,} from '../../features/countriesSlice'
-import Dropdown
- from '../Dropdown';
+import DropdownMenu from '../DropdownMenu';
 interface MenuProps {
     isMenuOpen: any
 }
@@ -29,7 +28,7 @@ const Menu = ({isMenuOpen =false}: MenuProps): JSX.Element => {
 
     return (
     <div className={"menu " + (isMenuOpen && "active")}>
-      <Dropdown
+      <DropdownMenu
                     value={region}
                     options={RegionsFilter}
                     placeholder="Filter by Region"
