@@ -13,7 +13,7 @@ const Favorites = () => {
   );
 
   const favoriteList = favoriteInfo.map((country: any) => (
-    <Link to={"/detail/:cca3"}>
+    <Link to={`/detail/${country.cca3.toLowerCase()}`}>
       <div className="fav-name">{country.name.common}</div>
       <img src={country.flags.png} alt={country.flags.alt} />
     </Link>
