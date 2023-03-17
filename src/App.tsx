@@ -38,7 +38,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <FormGroup className="switch">
-          <Switch
+        <Switch
             checked={mode === "light" ? false : true}
             onChange={colorMode.toggleColorMode}
             color={"secondary"}

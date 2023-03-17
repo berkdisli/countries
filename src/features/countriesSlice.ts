@@ -11,12 +11,12 @@ export interface CountryState {
   favoriteCountries: string[];
 }
 
-const baseURL = "https://restcountries.com/v3.1/all";
+const baseURL = "https://restcountries.com/v3.1";
 
 export const getAllCountries = createAsyncThunk(
   "countries/fetchCountries",
   async () => {
-    const response = await axios.get(`${baseURL}`);
+    const response = await axios.get(`${baseURL}/all`);
     return response.data;
   }
 );
@@ -123,7 +123,7 @@ export const { handleFavorites, sortAZ, sortZA } = countriesSlice.actions;
 export const allCountries = (state: RootState) => state.countriesR.countries;
 export const filteredCountries = (state: RootState) =>
   state.countriesR.filteredCountries;
-export const selectedRegion = (state: RootState) =>
+export const filteredRegion = (state: RootState) =>
   state.countriesR.filteredRegion;
 export const status = (state: RootState) => state.countriesR.status;
 export const selectedCountry = (state: RootState) =>

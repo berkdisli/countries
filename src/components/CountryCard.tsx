@@ -1,11 +1,12 @@
-import FormatNumber from './FormatNumber';
 import { TableContainer, Paper, Table, TableHead, TableRow, TableCell } from '@mui/material'
-import { SlArrowRight } from 'react-icons/sl';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
-import { handleFavorites } from '../features/countriesSlice';
 import { Link } from 'react-router-dom';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
-import { useState } from 'react';
+import { SlArrowRight } from 'react-icons/sl';
+
+import FormatNumber from './FormatNumber';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { handleFavorites } from '../features/countriesSlice';
+
 
 interface CountryCardProps {
 	  country: any,
