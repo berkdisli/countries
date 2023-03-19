@@ -12,6 +12,12 @@
   justify-content: center;
   transition: all 2s ease;
 
+  @media (max-width: 450px) {
+    width: 250px;
+    height: 52vh;
+    padding-top: 50px;
+  }
+
   &.active {
     right: 0;
   }

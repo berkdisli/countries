@@ -52,15 +52,12 @@ nav {
 }
 
 // switch
-
 .switch {
   margin-top: 5rem;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
-  flex-direction: row;
-
-  .switch-button {
-    width: 3.6rem;
-  }
+  flex-direction: column;
 
   .sun {
     color: #f7d308;
@@ -81,7 +78,6 @@ nav {
 }
 
 //down-up arrow
-
 .down-up {
   cursor: pointer;
 }
@@ -262,9 +258,19 @@ nav {
 }
 
 @media (max-width: 450px) {
-  .title {
-    font-size: 4.5em;
-    top: 20vh;
+  nav {
+    width: 94%;
+  }
+  .home {
+    margin-left: 15rem;
+  }
+  .switch {
+    margin-left: 46rem;
+  }
+  .footer {
+    width: 100rem;
+    align-items: center;
+    padding-right: 10rem;
   }
 }
 
