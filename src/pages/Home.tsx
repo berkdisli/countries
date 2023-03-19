@@ -78,8 +78,8 @@ const Home = () => {
           <Table aria-label="body">
             <TableHead>
               <TableRow>
-                <TableCell width="30%"><p className="flag-cell">Flag</p></TableCell>
-                <TableCell width="10.3%">
+                <TableCell width="14%"><p className="flag-cell">Flag</p></TableCell>
+                <TableCell width="11%">
                   <p className="cells">Name{" "}
                   <AiOutlineDown
                     className="down-up"
@@ -92,9 +92,9 @@ const Home = () => {
                 </TableCell>
                 <TableCell width="10.3%"><p className="cells">Population</p></TableCell>
                 <TableCell width="10.3%"><p className="cells">Region</p></TableCell>
-                <TableCell width="10.3%"><p className="cells">Capital</p> </TableCell>
+                <TableCell width="10%"><p className="cells">Capital</p> </TableCell>
                 <TableCell width="10.3%"><p className="cells">Languages</p></TableCell>
-                <TableCell width="10.3%"><p className="cells">Favorites</p></TableCell>
+                <TableCell width="9%"><p className="cells">Favorites</p></TableCell>
               </TableRow>
             </TableHead>
           </Table>

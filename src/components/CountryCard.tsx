@@ -44,7 +44,7 @@ const CountryCard = ({country}: CountryCardProps): JSX.Element => {
 	<Table aria-label='body'>
  		<TableHead>
 			<TableRow>
-				<TableCell width='15%'><img src={flags.png} alt={name.common} width="320" height="213" /></TableCell>
+				<TableCell width='15%'><img src={flags.png} alt={name.common} width="160" height="106.5" /></TableCell>
 				<TableCell width='15%'><h3>{name.common}</h3></TableCell>
 				<TableCell width='15%'><p>Population: {FormatNumber(population)}</p></TableCell>
 				<TableCell width='15%'><p>Region: {region}</p></TableCell>
