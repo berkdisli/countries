@@ -78,9 +78,9 @@ const Home = () => {
           <Table aria-label="body">
             <TableHead>
               <TableRow>
-                <TableCell width="29%">Flag</TableCell>
-                <TableCell width="12.4%">
-                  Name{" "}
+                <TableCell width="30%"><p className="flag-cell">Flag</p></TableCell>
+                <TableCell width="10.3%">
+                  <p className="cells">Name{" "}
                   <AiOutlineDown
                     className="down-up"
                     onClick={handleSortingAZ}
@@ -88,13 +88,13 @@ const Home = () => {
                   <AiOutlineUp
                     className="down-up"
                     onClick={handleSortingZA}
-                  ></AiOutlineUp>
+                  ></AiOutlineUp></p>
                 </TableCell>
-                <TableCell width="12.4%">Population</TableCell>
-                <TableCell width="12.4%">Region</TableCell>
-                <TableCell width="12.4%">Capital </TableCell>
-                <TableCell width="12.4%">Languages</TableCell>
-                <TableCell>Favorites</TableCell>
+                <TableCell width="10.3%"><p className="cells">Population</p></TableCell>
+                <TableCell width="10.3%"><p className="cells">Region</p></TableCell>
+                <TableCell width="10.3%"><p className="cells">Capital</p> </TableCell>
+                <TableCell width="10.3%"><p className="cells">Languages</p></TableCell>
+                <TableCell width="10.3%"><p className="cells">Favorites</p></TableCell>
               </TableRow>
             </TableHead>
           </Table>

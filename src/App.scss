@@ -70,14 +70,30 @@ nav {
 
 //title
 .title {
+  bottom: 0.8em;
+  width: 100%;
   text-align: center;
-  font-size: 5em;
+  font-size: 6em;
   color: #08bae3;
-  z-index: 0;
+  z-index: 50;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
 }
 
-//down-up arrow
+//tablecells
+.cells {
+  padding-left: 0.3rem;
+  font-weight: none;
+  font-family: "Roboto";
+  font-size: medium;
+}
+.flag-cell {
+  padding-left: 9rem;
+  font-weight: none;
+  font-family: "Roboto";
+  font-size: medium;
+}
+
+//name down-up arrow
 .down-up {
   cursor: pointer;
 }
@@ -265,7 +281,8 @@ nav {
     margin-left: 15rem;
   }
   .switch {
-    margin-left: 46rem;
+    margin-left: 47rem;
+    margin-top: 6rem;
   }
   .footer {
     width: 100rem;
@@ -273,7 +290,6 @@ nav {
     padding-right: 10rem;
   }
 }
-
 @media (max-width: 370px) {
   .title {
     font-size: 4em;
