@@ -78,7 +78,7 @@ interface TriggerProps {
   isMenuOpen: boolean;
 }
 export const DropdownTrigger = styled.div<TriggerProps>`
-  margin-bottom: 27rem;
+  margin-bottom: 24rem;
   width: 13rem;
   height: 70px;
   background-color: white;

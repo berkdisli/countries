@@ -4,7 +4,7 @@ import { RootState } from "../app/store";
 
 export interface CountryState {
   countries: any[];
-  filteredCountries: any[];
+  filteredCountries: string[];
   selectedCountry: any;
   filteredRegion: string;
   status: "successful" | "loading" | "failed";
