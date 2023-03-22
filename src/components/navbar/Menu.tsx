@@ -13,7 +13,7 @@ const Menu = ({isMenuOpen =false}: MenuProps): JSX.Element => {
     const region = useAppSelector(filteredRegion);
     const dispatch = useAppDispatch();
 
-    function handleFilterChange(value: string): void {
+    const handleFilterChange = (value: string): void => {
         if (!value) return
         if (value === 'All') {
             dispatch(getAllCountries());
