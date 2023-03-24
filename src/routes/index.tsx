@@ -2,7 +2,6 @@ import Header from "../layouts/Header";
 import Home from "../pages/Home";
 import Detail from "../pages/Detail";
 import { NotFound } from "../pages";
-import { Footer } from "../layouts";
 import Favorites from "../pages/Favorites";
 
 const BrowserRouter = require("react-router-dom").BrowserRouter;
@@ -20,7 +19,6 @@ function Index() {
           <Route path='/favorites' element={<Favorites />} />
           <Route path='*' element={<NotFound />} />
       </Routes>
-    <Footer/>
     </BrowserRouter>
     </div>
 

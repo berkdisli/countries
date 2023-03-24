@@ -25,12 +25,12 @@ const Favorites = () => {
   const favoriteList = favoriteInfo.map((country: any) => (
     <Link to={`/detail/${country.cca3.toLowerCase()}`}>
       <div className="fav-name">{country.name.common}</div>
-      <img src={country.flags.png} alt={country.flags.alt} />
+      <img src={country.flags.png} alt={country.flags.alt} width="160" height="106.5" />
     </Link>
   ));
   return (
     <div className="favorite-body">
-      <h1>Favorites</h1>
+      <h2>Favorites</h2>
       {favoriteList}
       <div className="action-buttons">
         <Button onClick={handleBackClick}>

@@ -12,6 +12,7 @@ import {
 import { MainWrapper } from "../components/componentStyles";
 import SearchBar from "../components/SearchBar";
 import CountryCard from "../components/CountryCard";
+import { Footer } from "../layouts";
 
 import {
   allCountries,
@@ -78,8 +79,8 @@ const Home = () => {
           <Table aria-label="body">
             <TableHead>
               <TableRow>
-                <TableCell width="14%"><p className="flag-cell">Flag</p></TableCell>
-                <TableCell width="11%">
+                <TableCell width="12%"><p className="flag-cell">Flag</p></TableCell>
+                <TableCell width="13%">
                   <p className="cells">Name{" "}
                   <AiOutlineDown
                     className="down-up"
@@ -90,11 +91,11 @@ const Home = () => {
                     onClick={handleSortingZA}
                   ></AiOutlineUp></p>
                 </TableCell>
-                <TableCell width="10.3%"><p className="cells">Population</p></TableCell>
-                <TableCell width="10.3%"><p className="cells">Region</p></TableCell>
-                <TableCell width="10%"><p className="cells">Capital</p> </TableCell>
+                <TableCell width="10%"><p className="cells">Population</p></TableCell>
+                <TableCell width="10%"><p className="cells">Region</p></TableCell>
+                <TableCell width="9%"><p className="cells">Capital</p> </TableCell>
                 <TableCell width="10.3%"><p className="cells">Languages</p></TableCell>
-                <TableCell width="9%"><p className="cells">Favorites</p></TableCell>
+                <TableCell width="7%"><p className="cells">Favorites</p></TableCell>
               </TableRow>
             </TableHead>
           </Table>
@@ -112,6 +113,7 @@ const Home = () => {
             );
           })}
       </div>
+      <Footer></Footer>
     </MainWrapper>
   );
 };

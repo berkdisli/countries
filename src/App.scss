@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
-
 :root {
   --border-radius: 0.6rem;
   --text-color: #fff;
@@ -12,7 +10,7 @@
   list-style-type: none;
   text-decoration: none;
   outline: none;
-  font-family: "Teko", sans-serif;
+  font-family: "Nunito", sans-serif;
   margin-right: auto;
   margin-left: auto;
 }
@@ -71,9 +69,8 @@ nav {
 //title
 .title {
   bottom: 0.8em;
-  width: 100%;
   text-align: center;
-  font-size: 6em;
+  font-size: 4em;
   color: #08bae3;
   z-index: 50;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
@@ -83,13 +80,13 @@ nav {
 .cells {
   padding-left: 0.3rem;
   font-weight: none;
-  font-family: "Roboto";
+  font-family: "Nunito";
   font-size: medium;
 }
 .flag-cell {
   padding-left: 4.5rem;
   font-weight: none;
-  font-family: "Roboto";
+  font-family: "Nunito";
   font-size: medium;
 }
 
@@ -103,9 +100,9 @@ nav {
   z-index: 0;
   text-align: center;
   font-size: 2em;
-  h1 {
+  h2 {
     color: #e37d08;
-    font-size: 5rem;
+    font-size: 4rem;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.5);
   }
 }

@@ -1,5 +1,4 @@
 .topbar {
-  height: 10vh;
   background-color: rgb(16, 79, 90);
   color: rgb(255, 255, 255);
   position: fixed;
@@ -7,6 +6,7 @@
   z-index: 3;
   transition: all 1s ease;
   left: 0.1rem;
+  margin-top: 0.4rem;
 
   .wrapper {
     padding: 10px 30px;
