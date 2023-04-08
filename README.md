@@ -59,3 +59,6 @@ ONLY DO THIS PART WHEN YOU HAVE COMPLETED THE REQUIREMENTS PART
 6. Deploy: `https://vercel.com/`, `https://www.netlify.com/`
 7. Prettier - Code formatter - Extension in VSCode
 
+## Website
+
+Hosted on: `https://berkdisli.github.io/country`
